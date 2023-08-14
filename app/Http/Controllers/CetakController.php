@@ -25,13 +25,19 @@ class CetakController extends Controller
 
     public function cetak_1($id)
     {
-        $data = Surat::find($id);
+        $data = Surat::select('surat.*', 'users.*')
+        ->join('users', 'users.id', '=', 'surat.userId')
+        ->where('surat.id_surat', '=', $id)
+        ->first();
         return view('cetak.template', compact('data'));
     }
 
     public function cetak_2($id)
     {
-        $data = Surat::find($id);
+        $data = Surat::select('surat.*', 'users.*')
+        ->join('users', 'users.id', '=', 'surat.userId')
+        ->where('surat.id_surat', '=', $id)
+        ->first();
         return view('cetak.template2', compact('data'));
     }
 }

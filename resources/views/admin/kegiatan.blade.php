@@ -99,37 +99,6 @@
                                           <td><label class="badge badge-danger">{{$item->status}}</label></td>
                                           @endif
                                           
-
-                                            {{-- <ul class="navbar-nav ms-auto">
-                                            <li class="nav-item nav-profile dropdown">
-                                                <div class="dropdown">
-                                                  <a class="nav-link dropdown-toggle" style="text-decoration: none; color: white;" id="dropdownMenuButton2"  data-bs-toggle="dropdown" aria-expanded="false" >{{$item->status}}</a>
-                                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                                    <li>
-                                                      <a class="dropdown-item" href="/surat_admin">
-                                                        <i class="ti-power-off text-primary"></i>
-                                                        Terlaksana
-                                                      </a>
-                                                  </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                        <i class="ti-power-off text-primary"></i>
-                                                        Tidak Terlaksana
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                        <i class="ti-power-off text-primary"></i>
-                                                        Segera
-                                                        </a>
-                                                    </li>
-                                                  </ul>
-                                                </div>
-                                            </li>
-                                            </ul> --}}
-
-                                        
-                                        {{-- </td> --}}
                                     </tr>
 
                                     

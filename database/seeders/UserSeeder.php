@@ -22,6 +22,10 @@ class UserSeeder extends Seeder
             'level' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('admin'),
+            'nama_di_surat' => "Sekar Mentari",
+            'ttl' => "sragen, 06-10-2002",
+            'pangkalan' => 'sragen',
+            'no_tlpn' => '089670128440',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -30,6 +34,10 @@ class UserSeeder extends Seeder
             'level' => 'user',
             'email' => 'sekar@gmail.com',
             'password' => Hash::make('sekar'),
+            'nama_di_surat' => "Sekar Mentari",
+            'ttl' => "sragen, 06-10-2002",
+            'pangkalan' => 'sragen',
+            'no_tlpn' => '089670128440',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);

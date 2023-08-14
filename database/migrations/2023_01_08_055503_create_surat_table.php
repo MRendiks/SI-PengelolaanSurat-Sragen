@@ -16,10 +16,6 @@ return new class extends Migration
         Schema::create('surat', function (Blueprint $table) {
             $table->increments('id_surat');
             $table->bigInteger('userId')->unsigned();
-            $table->string('nama')->nullable();
-            $table->string('ttl')->nullable();
-            $table->string('pangkalan')->nullable();
-            $table->string('no_tlpn')->nullable();
             $table->enum('jenis_surat', ['Surat Keterangan', 'Surat Rekomendasi'])->nullable();
             $table->text('keperluan')->nullable();
             $table->date('waktu')->nullable();

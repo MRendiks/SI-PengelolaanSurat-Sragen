@@ -76,7 +76,7 @@
                 SURAT REKOMENDASI
             </u>
             <br style="font-size: 15px">
-            Nomor: SR/{{$data->id_surat}}
+            Nomor: {{$data->id_surat}} / 11.14 - C
         </b>
     </div>
     <br>
@@ -95,7 +95,7 @@
     <br>
     Dengan ini memberikan rekomendasi kepada:
     <br>
-    <b>{{$data->nama}}</b>
+    <b>{{$data->nama_di_surat}}</b>
     <br>
     <br>
     Untuk mengikuti kegiatan <b>{{$data->keperluan}}</b> yang akan dilaksanakan besok pada :

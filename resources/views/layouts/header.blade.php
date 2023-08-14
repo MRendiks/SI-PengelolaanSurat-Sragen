@@ -35,6 +35,9 @@
         </li>
         @if (auth()->user()->level=="admin")
         <li class="nav-item">
+          <a class="nav-link" href="{{route('admin.data_user')}}">User</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/kegiatan_admin">Kegiatan</a>
         </li>
         

@@ -13,8 +13,6 @@ class Surat extends Model
 
     protected $fillable = [
         'userId',
-        'pangkalan',
-        'no_tlpn',
         'jenis_surat',
         'keperluan',
         'waktu',

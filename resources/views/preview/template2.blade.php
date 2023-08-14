@@ -76,7 +76,7 @@
                 SURAT KETERANGAN
             </u>
             <br style="font-size: 15px">
-            Nomor: SK/{{$data->id_surat}}
+            Nomor: {{$data->id_surat}} / 11.14 - B
         </b>
     </div>
     <br>
@@ -95,11 +95,11 @@
     <br>
     Dengan ini menerangkan bahwa:
     <br>
-    Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <b>{{$data->nama}}</b>
+    Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  <b>{{$data->nama_di_surat}}</b>
     <br>
     Tempat, Tanggal Lahir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->ttl}}
     <br>
-    Gugus Depan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+    Gugus Depan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Sragen
     <br>
     Dengan ini menerangkan bahwa kakak tersebut <b>AKTIF</b> sebagai Anggota Gerakan Pramuka di Gugus depan tersebut dan mengikuti kegiatan Kepramukaan secara rutin.
     <br>

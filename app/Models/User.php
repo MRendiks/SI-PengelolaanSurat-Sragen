@@ -22,6 +22,11 @@ class User extends Authenticatable
         'email',
         'password',
         'level',
+        'pangkalan',
+        'no_tlpn',
+        'ttl',
+        'nama_di_surat',
+        'email_di_surat'
     ];
 
     /**

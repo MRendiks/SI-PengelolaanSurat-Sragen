@@ -13,10 +13,10 @@
         <div class="shape"></div>
     </div>
     <form action="/register" method="POST">
-        <h3>Register Place</h3>
+        <h3>Register Akun</h3>
         @csrf
-        <div class="mb-4">
-                    <label for="input-name" class="form-label">Name</label>
+                <div class="mb-4">
+                    <label for="input-name" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="input-name" name="name" value="{{ old('name') }}" />
                     @error('name')
                     <small class="text-danger mt-2">{{ $message }}</small>
@@ -36,6 +36,42 @@
                     <small class="text-danger mt-2">{{ $message }}</small>
                     @enderror
                 </div>
+                <div class="mb-4">
+                    <label for="input-nama_di_surat" class="form-label">Nama Di Surat</label>
+                    <input type="text" class="form-control" id="input-nama_di_surat" name="nama_di_surat" />
+                    @error('nama_di_surat')
+                    <small class="text-danger mt-2">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="input-tempat" class="form-label">Tempat</label>
+                    <input type="text" class="form-control" id="input-tempat" name="tempat" />
+                    @error('tempat')
+                    <small class="text-danger mt-2">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="input-tanggal_lahir" class="form-label">Tanggal Lahir</label>
+                    <input type="date" class="form-control" max="{{$value}}" id="input-tanggal_lahir" name="tanggal_lahir" />
+                    @error('tanggal_lahir')
+                    <small class="text-danger mt-2">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="input-pangkalan" class="form-label">pangkalan</label>
+                    <input type="text" class="form-control" id="input-pangkalan" name="pangkalan" />
+                    @error('pangkalan')
+                    <small class="text-danger mt-2">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="input-no_tlpn" class="form-label">Nomor Telephon</label>
+                    <input type="number" class="form-control" id="input-no_tlpn" name="no_tlpn" />
+                    @error('no_tlpn')
+                    <small class="text-danger mt-2">{{ $message }}</small>
+                    @enderror
+                </div>
+                
                 <div>
                     <button class="btn btn-primary" type="submit">Register</button>
                 </div>

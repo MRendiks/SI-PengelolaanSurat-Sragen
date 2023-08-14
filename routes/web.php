@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\CetakController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PreviewController;
 use App\Http\Controllers\SuratUserController;
@@ -71,6 +72,16 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function(){
 
     route::get('/cetak_surat1/{id_surat}', [CetakController::class, 'cetak_1'])->name('cetak_1');
     route::get('/cetak_surat2/{id_surat}', [CetakController::class, 'cetak_2'])->name('cetak_2');
+
+    # DATA USER
+    # 1. VIEW
+    route::get('/data_user', [DataUserController::class, 'index'])->name('admin.data_user');
+    # 2. Add
+    route::post('/add_user_admin', [DataUserController::class, 'add_user'])->name('admin.add_user');
+    # 3. Update
+    route::put('/{id}/update_user', [DataUserController::class, 'update'])->name('update_user');
+    # 4. DELETE
+    route::delete('/{id}/delete_user', [DataUserController::class, 'destroy'])->name('delete_data_user');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function(){

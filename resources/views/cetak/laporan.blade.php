@@ -106,7 +106,7 @@
                                     <tr>
                                     <td>{{ $item->id_surat }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ $item->nama_di_surat }}</td>
                                         <td>{{ $item->ttl }}</td>
                                         <td>{{ $item->pangkalan }}</td>
                                         <td>{{ $item->no_tlpn }}</td>

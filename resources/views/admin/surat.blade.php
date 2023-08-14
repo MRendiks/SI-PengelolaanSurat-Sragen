@@ -1,28 +1,6 @@
 @include('layouts.header')
 <br><br><br>
-@if(session('success'))
-<div class="alert alert-success">
-    <script>
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: "{{ session('success') }}",
-        });
-    </script>
-</div>
-@endif
 
-@if(session('failed'))
-<div class="alert alert-error">
-    <script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Failed!',
-            text: "{{ session('failed') }}",
-        });
-    </script>
-</div>
-@endif
 
 <div class="card">
   <div class="card-body">
@@ -129,7 +107,7 @@
                                       <tr>
                                         <td>{{ $item->id_surat }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ $item->nama_di_surat }}</td>
                                         <td>{{ $item->ttl }}</td>
                                         <td>{{ $item->pangkalan }}</td>
                                         <td>{{ $item->no_tlpn }}</td>
@@ -316,7 +294,7 @@
                                                   @method('PUT')
                                                   <div class="form-group">
                                                     <label for="nama_di_surat">Nama</label>
-                                                    <input type="text" name="nama_di_surat" id="nama_di_surat" value="{{$item->nama}}" class="form-control">
+                                                    <input type="text" id="nama_di_surat" value="{{$item->nama_di_surat}}" class="form-control" readonly>
                                                     @error('pengakalan')
                                                         <span class="invalid-feedback" role="alert">
                                                           <strong>{{massage}}</strong>
@@ -325,7 +303,7 @@
                                                   </div>
                                                   <div class="form-group">
                                                     <label for="pangkalan">Pangkalan</label>
-                                                    <input type="text" name="pangkalan" id="pangkalan" value="{{$item->pangkalan}}" class="form-control">
+                                                    <input type="text"  id="pangkalan" value="{{$item->pangkalan}}" class="form-control" readonly>
                                                     @error('pengakalan')
                                                         <span class="invalid-feedback" role="alert">
                                                           <strong>{{massage}}</strong>
@@ -335,7 +313,7 @@
                                     
                                                   <div class="form-group">
                                                     <label for="no_tlpn">No Telephon</label>
-                                                    <input type="text" name="no_tlpn" id="no_tlpn" value="{{$item->no_tlpn}}" class="form-control">
+                                                    <input type="text" id="no_tlpn" value="{{$item->no_tlpn}}" class="form-control" readonly>
                                                     @error('no_tlpn')
                                                         <span class="invalid-feedback" role="alert">
                                                           <strong>{{massage}}</strong>
@@ -418,4 +396,27 @@
                       </div> --}}
   </div>
 </div>
+@if(session('success'))
+<div class="alert alert-success">
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: "{{ session('success') }}",
+        });
+    </script>
+</div>
+@endif
+
+@if(session('failed'))
+<div class="alert alert-error">
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Failed!',
+            text: "{{ session('failed') }}",
+        });
+    </script>
+</div>
+@endif
 @include('layouts.footer')

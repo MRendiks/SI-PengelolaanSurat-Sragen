@@ -16,9 +16,10 @@ class SuratController extends Controller
     public function index()
     {
         // $surat = surat::get();
-        $surat = Surat::select('surat.id_surat', 'users.id', 'users.name', 'surat.nama', 'surat.ttl' ,'surat.pangkalan', 'surat.no_tlpn', 'surat.jenis_surat', 'surat.keperluan', 'surat.waktu', 'surat.lokasi', 'surat.jumlah_peserta', 'surat.permohonan', 'surat.progres')
+        $surat = Surat::select('surat.*', 'users.*')
         	->join('users', 'users.id', '=', 'surat.userId')
         	->get();
+        // dd($surat);
         return view ('admin.surat',['surat' => $surat]);
     }
 
@@ -65,16 +66,17 @@ class SuratController extends Controller
                 'subject' => 'Surat Keterangan Kwartir',
                 'body' => 'Surat Anda Dapat diambil'
             ];
-            // try
-            // {
-            //     Mail::to('sekarmentari51@gmail.com')->send(new MailNotify());
+            try
+            {
+                Mail::to('muh.rendi2001@gmail.com')->send(new MailNotify());
 
-            //     $massage = "surat Berhasil Di Update";
-            //     return redirect()->route('surat_admin')->with('success', $massage);
-            // }catch(Exception $th)
-            // {
-                
-            // }
+                $massage = "surat Berhasil Di Update";
+                return redirect()->route('surat_admin')->with('success', $massage);
+            }catch(Exception $th)
+            {
+                $massage = "surat Berhasil Di Update";
+                return redirect()->route('surat_admin')->with('failed', $massage);
+            }
         }
         $massage = "surat Berhasil Di Update";
         return redirect()->route('surat_admin')->with('success', $massage);

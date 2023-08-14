@@ -10,7 +10,7 @@ background-color: #F5F5DC;
 }
 .background{
 width: 430px;
-height: 520px;
+height: 2000px;
 position: absolute;
 transform: translate(-50%,-50%);
 left: 50%;
@@ -23,12 +23,12 @@ position: absolute;
 border-radius: 50%;
 }
 form{
-height: 620px;
+height: 1320px;
 width: 600px;
 background-color: #8B4513;
 position: absolute;
 transform: translate(-50%,-50%);
-top: 50%;
+top: 90%;
 left: 50%;
 border-radius: 10px;
 backdrop-filter: blur(10px);
