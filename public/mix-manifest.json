@@ -1,0 +1,8 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/pdfobject.js": "/js/pdfobject.js",
+    "/js/pdf.js": "/js/pdf.js",
+    "/js/pdf.worker.js": "/js/pdf.worker.js",
+    "/css/pdf_viewer.css": "/css/pdf_viewer.css",
+    "/js/pdf_viewer.js": "/js/pdf_viewer.js"
+}
