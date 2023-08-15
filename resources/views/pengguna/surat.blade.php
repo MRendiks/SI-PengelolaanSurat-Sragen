@@ -62,7 +62,7 @@
                                   <tbody>
                                   @foreach($data_surat as $item)
                                   <tr>
-                                      <td>{{ $item->id_surat }}</td>
+                                      <td>{{ $loop->iteration }}</td>
                                       <td>{{ $item->name }}</td>
                                       <td>{{ $item->nama_di_surat }}</td>
                                       <td>{{ $item->ttl }}</td>
@@ -151,7 +151,7 @@
               </div>
 
               <div class="form-group">
-                <label for="nama_di_surat">Nama</label>
+                <label for="nama_di_surat">Nama Di Surat</label>
                 <input type="text" name="nama_di_surat" id="nama_di_surat" value="{{$user->nama_di_surat}}" class="form-control" readonly>
                 @error('pengakalan')
                     <span class="invalid-feedback" role="alert">
@@ -180,7 +180,7 @@
                 @enderror
               </div>
 
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label for="no_tlpn">No Telephon</label>
                 <input type="text" name="no_tlpn" id="no_tlpn" value="{{$user->no_tlpn}}" class="form-control" readonly>
                 @error('no_tlpn')
@@ -198,6 +198,7 @@
                     </span>
                 @enderror
               </div>
+              --}}
               <div class="form-group">
                 <label for="waktu">waktu</label>
                 <input type="date" name="waktu" id="waktu" value="{{old('waktu')}}" min="{{$current}}" class="form-control">
@@ -225,7 +226,7 @@
                       <strong>{{$massage}}</strong>
                     </span>
                 @enderror
-              </div>
+              </div> 
               <div class="form-group">
                 <label for="permohonan">Surat Permohonan</label>
                 <div class="col-sm-9">
@@ -247,7 +248,7 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
       <div class="modal-header">
-          <center><h4 class="modal-title" id="PengajuanSurat1Label">Pengajuan Surat</h4></center>
+          <center><h4 class="modal-title" id="PengajuanSurat1Label">Pengajuan Surat Rekomendasi</h4></center>
           <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -264,7 +265,7 @@
             </div>
 
             <div class="form-group">
-              <label for="nama_di_surat">Nama</label>
+              <label for="nama_di_surat">Nama Di Surat</label>
               <input type="text" name="nama_di_surat" id="nama_di_surat" value="{{$user->nama_di_surat}}" class="form-control" readonly>
               @error('pengakalan')
                   <span class="invalid-feedback" role="alert">
@@ -292,16 +293,6 @@
                   </span>
               @enderror
             </div>
-
-            <div class="form-group">
-              <label for="no_tlpn">No Telephon</label>
-              <input type="text" name="no_tlpn" id="no_tlpn" value="{{$user->no_tlpn}}" class="form-control" readonly>
-              @error('no_tlpn')
-                  <span class="invalid-feedback" role="alert">
-                    <strong>{{$massage}}</strong>
-                  </span>
-              @enderror
-            </div>
             <div class="form-group">
               <label for="keperluan">keperluan</label>
               <input type="text" name="keperluan" id="keperluan" value="{{old('keperluan')}}" class="form-control">
@@ -312,7 +303,7 @@
               @enderror
             </div>
             <div class="form-group">
-              <label for="waktu">waktu</label>
+              <label for="waktu">Waktu Pelaksanaan</label>
               <input type="date" name="waktu" id="waktu" value="{{old('waktu')}}" min="{{$current}}" class="form-control">
               @error('waktu')
                   <span class="invalid-feedback" role="alert">

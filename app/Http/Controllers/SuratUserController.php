@@ -41,21 +41,28 @@ class SuratUserController extends Controller
             $filename = $request->nama_pengaju . 'permohonan' . rand(1, 10000) . '.' . $ext;
             $file->move('surat_file/', $filename);
 
-            // $ttl = $request->tempat. '/' . $request->tanggal_lahir;
-
-            $surat->id_surat = $request->id_surat;
-            $surat->userId = $request->id_user;
-            // $surat->nama = $request->nama_di_surat;
-            // $surat->ttl = $ttl;
-            // $surat->pangkalan = $request->pangkalan;
-            // $surat->no_tlpn = str($request->no_tlpn);
-            $surat->jenis_surat = $request->jenis_surat;
-            $surat->keperluan = $request->keperluan;
-            $surat->waktu = $request->waktu;
-            $surat->lokasi = $request->lokasi;
-            $surat->jumlah_peserta = $request->jumlah_peserta;
-            $surat->permohonan = $filename;
-            $surat->progres = "Diproses";
+            if ($request->jenis_surat == "Surat Keterangan") {
+                $surat->id_surat = $request->id_surat;
+                $surat->userId = $request->id_user;
+                $surat->jenis_surat = $request->jenis_surat;
+                $surat->keperluan = "-";
+                $surat->waktu = $request->waktu;
+                $surat->lokasi = $request->lokasi;
+                $surat->jumlah_peserta = $request->jumlah_peserta;
+                $surat->permohonan = $filename;
+                $surat->progres = "Diproses";
+            }else if($request->jenis_surat == "Surat Rekomendasi"){
+                $surat->id_surat = $request->id_surat;
+                $surat->userId = $request->id_user;
+                $surat->jenis_surat = $request->jenis_surat;
+                $surat->keperluan = $request->keperluan;
+                $surat->waktu = $request->waktu;
+                $surat->lokasi = $request->lokasi;
+                $surat->jumlah_peserta = $request->jumlah_peserta;
+                $surat->permohonan = $filename;
+                $surat->progres = "Diproses";
+            }
+            
             $surat->save();
             $massage = "Surat Berhasil Di ajukan";
             return redirect()->route('surat')->with('success', $massage);
